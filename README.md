@@ -47,3 +47,47 @@ After processing, download the output video:
          files.download("output.mp4")
 
 # Code Explanation
+
+The google colab script follows these steps:
+
+1. Loads the Mediapipe Pose model.
+
+2. Reads frames from a video file or webcam.
+
+3. Converts to RGB and detcts body keypoints.
+
+4. Draws pose landmarks & connections on frames.
+
+5. Saves the processed video output.
+
+<ins> Function </ins> : detect_pose()
+
+          def detect_pose(video_source=0, output_file="output.mp4", display=True):
+
+1. video_source -> Use 0 for webcam or provide a video file path.
+
+2. output_file -> Saves the processed video as an MP4 file.
+
+3. display -> If True, dispalys frames while processing (only works locally).
+
+# Dependencies
+
+This project requires the following libraries:
+
+1. Mediapipe - Pose estimation
+
+2. OpenCV - Image processing
+
+3. NumPy - Numerical computations
+
+Install all dependencies using:
+
+          pip install mediapipe opencv-python numpy
+
+# Future Improvements
+
+1. Add pose classification for fitness tracking
+
+2. Improve FPS for real-time applications
+
+3. Implement multi-person tracking
